@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- bean definitions here -->
+
+<!--    Dependency Injection has two parts-->
+<!--    1. Setter Injection -->
+<!--    2. Constructor Injection-->
+
+    <!--        Setter Injection -->
+    <bean class="com.practice.spring.di.Student" id="student1">
+        <property name="studentName" value = "Ravi" />
+        <property name="id" value="101" />
+        <property name="course">
+            <bean class="com.practice.spring.di.Course">
+                <property name="courseName" value="JEE" />
+                <property name="coursePrice" value="145000" />
+                <property name="courseDuration" value="165" />
+            </bean>
+        </property>
+    </bean>
+
+    <bean class="com.practice.spring.di.Course" id="courseObj">
+        <constructor-arg name="courseName" value="JEE" />
+        <constructor-arg name="coursePrice" value="145000" />
+        <constructor-arg name="courseDuration" value="165" />
+    </bean>
+
+
+
+    <bean class="com.practice.spring.di.Student" id="student2">
+        <property name="studentName" value = "Durga" ></property>
+        <property name="id" value="110" ></property>
+        <constructor-arg name = "course" ref="courseObj" />
+    </bean>
+
+
+
+
+
+</beans>
