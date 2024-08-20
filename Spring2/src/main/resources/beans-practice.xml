@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+
+<!--
+    &lt;!&ndash; bean definitions here &ndash;&gt;
+    &lt;!&ndash;  using the setter injection  &ndash;&gt;
+    <bean class="Practice.Chef" id="chef">
+        <property name="ingredients">
+            <bean class="Practice.Ingredients" />
+        </property>
+    </bean>
+
+
+    &lt;!&ndash;  using the constructor injection  &ndash;&gt;
+    <bean class="Practice.Chef" id="chef1">
+        <constructor-arg name="ingredients">
+            <bean class="Practice.Ingredients" />
+        </constructor-arg>
+    </bean>
+
+
+
+    &lt;!&ndash;  using the ref &ndash;&gt;
+    <bean class="Practice.Ingredients" id="ingredientsObj" />
+
+    <bean class="Practice.Chef" id="chef2">
+        <property name="ingredients" ref="ingredientsObj" />
+    </bean>
+
+
+-->
+<!--   <bean class="Practice.Ingredients" id="ingredientsObj" />-->
+<!--    <bean class="Practice.Ingredients" id="ingredients" />-->
+
+<!--    <bean class="Practice.Chef" id="chef" autowire="constructor" />-->
+
+    <bean class="Practice.Ingredients" id="ingredientsssss"/>
+    <bean class="Practice.Ingredients" id="ingredients1"/>
+    <bean class="Practice.Chef" id="chef"/>
+
+
+
+
+
+
+
+
+</beans>
